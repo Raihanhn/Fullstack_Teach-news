@@ -3,17 +3,19 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <div>
+    <div className="flex justify-between pb-4 border-b mb-4">
       <div className="">
         <Link href={"/"}>
           {" "}
-          <h1>Tech News</h1>{" "}
+          <h1 className=" text-dark text-4xl font-bold tracking-tighter">
+            Tech News
+          </h1>{" "}
         </Link>
-        <p>
+        <p className="text-sm">
           Exploring Tomorrow&apos;s Innovations <br /> One Byte at a Time
         </p>
       </div>
-      <div className="">
+      <div className="flex items-center ">
         <Link className="btn" href={"/sign-in"}>
           Sign In
         </Link>

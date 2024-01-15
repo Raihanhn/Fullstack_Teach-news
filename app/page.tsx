@@ -1,3 +1,10 @@
+import CategoriesList from "@/components/CategoriesList";
+
 export default function Home() {
-  return <div className="">New website</div>;
+  return (
+    <>
+      <CategoriesList />
+      <div className="">Post</div>
+    </>
+  );
 }

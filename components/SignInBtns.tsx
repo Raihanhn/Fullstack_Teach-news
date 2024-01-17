@@ -19,7 +19,7 @@ export default function SignInBtns() {
           <span>
             <Image src={google} width={30} height={30} alt="GitHub Logo" />
           </span>
-          Sign In with GitHub
+          Sign In with Google
         </button>
       </div>
     </>

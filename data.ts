@@ -1,14 +1,15 @@
 export const postsData = [
   {
     id: "1",
-    title: "How to use Next.js for Server-Side Rendering",
+    title: "Why NextJS is Vastly Superior To React",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-    author: "John",
+      "Unlocking the Power of Seamless Development: Why Next.js is Vastly Superior to React for Building Modern Web Applications",
+    author: "Antony Adams",
     datepublished: "2021-01-01",
-    category: "Mobile",
-    links: ["https"],
-    thumbnail: "htps",
+    category: "Technology",
+    links: ["https://decentro.tech/blog/why-next-js/"],
+    thumbnail:
+      "https://decentro.tech/blog/wp-content/uploads/Thanks-NextJS.jpeg",
   },
 ];
 

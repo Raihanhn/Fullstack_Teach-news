@@ -6,7 +6,11 @@ export default function Home() {
   return (
     <>
       <CategoriesList />
-      {<Post />}
+      {postsData && postsData.length > 0 ? (
+        postsData.map((post, index) => <Post key={index} />)
+      ) : (
+        <div>No posts to display </div>
+      )}
     </>
   );
 }

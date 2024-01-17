@@ -7,7 +7,20 @@ export default function Home() {
     <>
       <CategoriesList />
       {postsData && postsData.length > 0 ? (
-        postsData.map((post, index) => <Post key={index} />)
+        postsData.map((post) => (
+          <Post
+            key={post.id}
+            id={post.id}
+            author={post.author}
+            authorEmail={"test@email.com"}
+            date={post.datepublished}
+            thumbnail={post.thumbnail}
+            category={post.category}
+            title={post.title}
+            content={post.content}
+            links={post.links || []}
+          />
+        ))
       ) : (
         <div>No posts to display </div>
       )}

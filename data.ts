@@ -7,7 +7,7 @@ export const postsData = [
     author: "Antony Adams",
     datepublished: "2021-01-01",
     category: "Technology",
-    links: ["https://decentro.tech/blog/why-next-js/"],
+    links: ["https://decentro.tech/blog/why-next-js"],
     thumbnail:
       "https://miro.medium.com/v2/resize:fit:1400/1*94Z17dA4rkLL5pOon2ZbCw.jpeg",
   },
@@ -19,7 +19,7 @@ export const postsData = [
     datepublished: "2023-15-03",
     category: "Programming",
     links: [
-      "https://www.linkedin.com/pulse/why-civil-engineers-need-embrace-computer/",
+      "https://www.linkedin.com/pulse/why-civil-engineers-need-embrace-computer",
     ],
     thumbnail:
       "https://media.licdn.com/dms/image/D4D12AQH84dbg2sIFug/article-cover_image-shrink_720_1280/0/1691554879476?e=1710979200&v=beta&t=tctgRRz7TVZKFPzC0odjUp_X7R_tHOCY8md3JEV_Pfs",
@@ -32,7 +32,7 @@ export const postsData = [
     author: "Chris jim",
     datepublished: "2021-01-01",
     category: "AI",
-    links: ["https://www.fujitsu.com/global/themes/ai/products/"],
+    links: ["https://www.fujitsu.com/global/themes/ai/products"],
     thumbnail:
       "https://omdia.tech.informa.com/-/media/tech/omdia/omdia-website-enhancement-oct-2023/ai-coverage-2.jpg?rev=56e6f88de6774db290c5069e65788bd1",
   },

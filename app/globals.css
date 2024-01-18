@@ -19,5 +19,5 @@ p.content {
 }
 
 .link {
-  @apply text-[#7563DF] font-bold;
+  @apply text-[#7563DF] font-bold max-w-full overflow-hidden text-ellipsis;
 }

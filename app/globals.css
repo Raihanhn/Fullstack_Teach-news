@@ -21,3 +21,16 @@ p.content {
 .link {
   @apply text-[#7563DF] font-bold max-w-full overflow-hidden text-ellipsis;
 }
+
+.primary-btn {
+  @apply px-4 py-2 bg-slate-800 text-white rounded-md;
+}
+
+input,
+textarea {
+  @apply px-4 py-2 border border-slate-300 rounded-md;
+}
+
+textarea {
+  @apply h-36;
+}

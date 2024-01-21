@@ -2,8 +2,16 @@ import React from "react";
 import { postsData } from "@/data";
 import Post from "@/components/Post";
 import Link from "next/link";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "../api/auth/[...nextauth]/route";
+import { redirect } from "next/navigation";
 
-export default function Dashboard() {
+export default async function Dashboard() {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    return redirect("/sign-in");
+  }
   return (
     <div>
       <h1 className="">My Posts</h1>

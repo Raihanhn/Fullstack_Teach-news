@@ -8,6 +8,7 @@ const nextConfig = {
       "co02201641.schoolwires.net",
       "www.simplilearn.com",
       "omdia.tech.informa.com",
+      "avatars.githubusercontent.com",
     ],
   },
 };

@@ -9,6 +9,7 @@ const nextConfig = {
       "www.simplilearn.com",
       "omdia.tech.informa.com",
       "avatars.githubusercontent.com",
+      "lh3.googleusercontent.com",
     ],
   },
 };

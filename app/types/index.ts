@@ -11,7 +11,7 @@ export type TPost = {
   publicId?: string;
   catName?: string;
   links: null | string[];
-  createAt: string;
+  createdAt: string;
   authorEmail: string;
   author: {
     name: string;

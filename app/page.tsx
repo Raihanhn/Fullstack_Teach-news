@@ -32,7 +32,7 @@ export default async function Home() {
             id={post.id}
             author={post.author.name}
             authorEmail={post.authorEmail}
-            date={post.createAt}
+            date={post.createdAt}
             thumbnail={post.imageUrl}
             category={post.catName}
             title={post.title}

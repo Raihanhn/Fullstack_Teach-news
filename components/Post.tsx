@@ -3,6 +3,8 @@ import React from "react";
 import nothumbnail from "../public/thumbnail-placeholder.png";
 import Link from "next/link";
 import DeleteButton from "./DeleteButton";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 interface PostProps {
   id: string;
@@ -16,7 +18,7 @@ interface PostProps {
   category?: string;
 }
 
-export default function Post({
+export default async function Post({
   id,
   author,
   date,
@@ -27,7 +29,9 @@ export default function Post({
   links,
   category,
 }: PostProps) {
-  const isEditable = true;
+  const session = await getServerSession(authOptions);
+
+  const isEditable = session && session.user?.email === authorEmail;
   return (
     <div className="my-4 border-b border-b-300 py-8">
       <div className="mb-4">

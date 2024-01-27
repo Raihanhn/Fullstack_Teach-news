@@ -12,7 +12,7 @@ export async function POST(req: Request) {
 
   const { title, content, links, selectedCategory, imageUrl, publicId } =
     await req.json();
-  const authorEmail = "mycash287@gmail.com";
+  const authorEmail = session?.user?.email as string;
 
   if (!title || !content) {
     return NextResponse.json(

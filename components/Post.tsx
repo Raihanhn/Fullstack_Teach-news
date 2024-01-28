@@ -44,9 +44,14 @@ export default async function Post({
   return (
     <div className="my-4 border-b border-b-300 py-8">
       <div className="mb-4">
-        {" "}
-        Posted by: <span className="font-bold "> {author} </span> on{" "}
-        {formattedDate}
+        {author ? (
+          <>
+            Posted by: <span className="font-bold "> {author} </span> on{" "}
+            {formattedDate}
+          </>
+        ) : (
+          <>Posted on {formattedDate}</>
+        )}
       </div>
       <div className="w-full h-72 relative">
         {thumbnail ? (

@@ -46,13 +46,22 @@ export default function EditPostForm({ post }: { post: TPost }) {
     post.links,
   ]);
 
+  const addLink = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+
+    if (linkInput.trim() !== "") {
+      setLinks((prev) => [...prev, linkInput]);
+      setLinkInput("");
+    }
+  };
+
   const deleteLink = (index: number) => {
     setLinks((prev) => prev.filter((_, i) => i !== index));
   };
 
   const handleImageUpload = (result: CldUploadWidgetResults) => {
-    console.log("result", result);
     const info = result.info as object;
+
     if ("secure_url" in info && "public_id" in info) {
       const url = info.secure_url as string;
       const public_id = info.public_id as string;
@@ -79,15 +88,6 @@ export default function EditPostForm({ post }: { post: TPost }) {
       }
     } catch (error) {
       console.log(error);
-    }
-  };
-
-  const addLink = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    e.preventDefault();
-
-    if (linkInput.trim() !== "") {
-      setLinks((prev) => [...prev, linkInput]);
-      setLinkInput("");
     }
   };
 

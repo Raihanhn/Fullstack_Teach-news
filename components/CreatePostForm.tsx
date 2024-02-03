@@ -32,6 +32,7 @@ export default function CreatePostForm() {
   const handleImageUpload = (result: CldUploadWidgetResults) => {
     console.log("result", result);
     const info = result.info as object;
+
     if ("secure_url" in info && "public_id" in info) {
       const url = info.secure_url as string;
       const public_id = info.public_id as string;
@@ -42,10 +43,6 @@ export default function CreatePostForm() {
     }
   };
 
-  const deleteLink = (index: number) => {
-    setLinks((prev) => prev.filter((_, i) => i !== index));
-  };
-
   const addLink = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
 
@@ -53,6 +50,10 @@ export default function CreatePostForm() {
       setLinks((prev) => [...prev, linkInput]);
       setLinkInput("");
     }
+  };
+
+  const deleteLink = (index: number) => {
+    setLinks((prev) => prev.filter((_, i) => i !== index));
   };
 
   const removeImage = async (e: React.FormEvent) => {
@@ -98,6 +99,7 @@ export default function CreatePostForm() {
           publicId,
         }),
       });
+
       if (res.ok) {
         toast.success("Post created successfully");
         router.push("/dashboard");

@@ -1,6 +1,6 @@
-import prisma from "@/app/lib/prismadb";
-import { getServerSession } from "next-auth/next";
+import prisma from "@/lib/prismadb";
 import { NextResponse } from "next/server";
+import { getServerSession } from "next-auth/next";
 import { authOptions } from "../../auth/[...nextauth]/route";
 
 export async function GET(
@@ -75,6 +75,6 @@ export async function DELETE(
     return NextResponse.json(post);
   } catch (error) {
     console.log(error);
-    return NextResponse.json({ message: "Error deleting post" });
+    return NextResponse.json({ message: "Error deleting the post" });
   }
 }

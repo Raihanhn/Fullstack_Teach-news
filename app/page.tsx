@@ -1,8 +1,6 @@
 import CategoriesList from "@/components/CategoriesList";
 import Post from "@/components/Post";
 import { TPost } from "./types";
-import { getServerSession } from "next-auth/next";
-import { authOptions } from "../app/api/auth/[...nextauth]/route";
 
 const getPosts = async (): Promise<TPost[] | null> => {
   try {
